@@ -1,0 +1,145 @@
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --dark-gray-20: hsl(0, 0%, 59%, 20%);
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--dark-cyan);
+  text-align: center;
+  font-family: "Kumbh Sans", sans-serif;
+  overflow: hidden;
+}
+
+body:after {
+  content: "";
+  position: absolute;
+  width: 978px;
+  height: 978px;
+  top: -80%;
+  left: -20%;
+  background-image: url(./images/bg-pattern-top.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  z-index: -1;
+}
+
+body:before {
+  content: "";
+  position: absolute;
+  width: 978px;
+  height: 978px;
+  bottom: -90%;
+  right: -15%;
+  background-image: url(./images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  z-index: -1;
+}
+
+.card {
+  background-color: var(--white);
+  min-width: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-img-user {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  border: 6px solid var(--white);
+}
+.card-img-user img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  margin-top: -30px;
+}
+
+h1.card-title {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--very-dark-desaturated-blue);
+}
+
+h1.card-title span {
+  margin-left: 8px;
+  font-weight: 400;
+}
+
+p.card-text {
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: var(--dark-grayish-blue);
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 50px 20px;
+  border-top: 1px solid var(--dark-gray-20);
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li h2 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  color: var(--very-dark-desaturated-blue);
+}
+
+ul li p {
+  color: var(--dark-grayish-blue);
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 767px) {
+  body:before {
+    width: 489px;
+    height: 489px;
+    bottom: -25%;
+    right: -70%;
+  }
+
+  body:after {
+    width: 489px;
+    height: 489px;
+    top: -35%;
+    left: -75%;
+  }
+}
